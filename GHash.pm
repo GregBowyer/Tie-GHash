@@ -27,8 +27,8 @@ use vars qw(@ISA %EXPORT_TAGS @EXPORT_OK @EXPORT $VERSION);
 $VERSION = '0.12';
 
 use Inline C => Config =>
-  LIBS => `glib-config --libs`,
-  INC => `glib-config --cflags`;
+  LIBS => `pkg-config glib-2.0 --libs`,
+  INC => `pkg-config glib-2.0 --cflags`;
 
 use Inline C => 'DATA',
   VERSION => '0.12',
